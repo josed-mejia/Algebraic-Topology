@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.29)  4 FEB 2026 19:18
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.1.29)  5 FEB 2026 15:46
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1790,14 +1790,20 @@ File: Udsrom.fd 1995/08/01 v0.1 Double stroke roman font definitions
 ) [2{C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/enc/dvips/new
 px/px-lms.enc}]
 Chapter 1.
-<images/MappingCylinder.png, id=74, 268.00125pt x 83.5622pt>
+<images/MappingCylinder.png, id=85, 268.00125pt x 83.5622pt>
 File: images/MappingCylinder.png Graphic file (type png)
 <use images/MappingCylinder.png>
-Package pdftex.def Info: images/MappingCylinder.png  used on input line 57.
+Package pdftex.def Info: images/MappingCylinder.png  used on input line 62.
 (pdftex.def)             Requested size: 245.71756pt x 76.6142pt.
 [3
 
- <./images/MappingCylinder.png>] [4] (Notes.aux)
+ <./images/MappingCylinder.png>]
+<images/Genus.png, id=99, 258.21469pt x 149.8097pt>
+File: images/Genus.png Graphic file (type png)
+<use images/Genus.png>
+Package pdftex.def Info: images/Genus.png  used on input line 108.
+(pdftex.def)             Requested size: 196.57104pt x 114.04855pt.
+ [4 <./images/Genus.png>] [5] (Notes.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-29>
@@ -1812,34 +1818,35 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 45527 strings out of 467871
- 1048359 string characters out of 5413536
- 1620449 words of memory out of 5000000
- 73614 multiletter control sequences out of 15000+600000
+ 45571 strings out of 467871
+ 1049072 string characters out of 5413536
+ 1624493 words of memory out of 5000000
+ 73641 multiletter control sequences out of 15000+600000
  656508 words of font info for 124 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,13n,118p,728b,1087s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 99i,13n,118p,728b,1081s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/ne
 wpx/NewPXMI.pfb><C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmbx10.pfb><C:/Users/JoseDanielMejia/AppData/Local/Prog
-rams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/JoseDanielMejia
-/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Use
+ype1/public/newpx/NewPXMI_gnu.pfb><C:/Users/JoseDanielMejia/AppData/Local/Progr
+ams/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/JoseDanielMejia/
+AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Use
 rs/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm
-/cmr12.pfb><C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/
-public/amsfonts/cm/cmr17.pfb><C:/Users/JoseDanielMejia/AppData/Local/Programs/M
-iKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/JoseDanielMejia/AppData
-/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><C:/Users/JoseDa
-nielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmss10.p
-fb><C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmssbx10.pfb><C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX
-/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/JoseDanielMejia/AppData/
-Local/Programs/MiKTeX/fonts/type1/public/newpx/pxmiaX.pfb><C:/Users/JoseDanielM
-ejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/pxsys.pfb><C:/Users
-/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/newtx/txexs.p
-fb>
-Output written on Notes.pdf (5 pages, 181411 bytes).
+/cmr10.pfb><C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><C:/Users/JoseDanielMejia/AppData/Local/Programs/M
+iKTeX/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Users/JoseDanielMejia/AppDat
+a/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/JoseD
+anielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pf
+b><C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/am
+sfonts/cm/cmss10.pfb><C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fo
+nts/type1/public/amsfonts/cm/cmssbx10.pfb><C:/Users/JoseDanielMejia/AppData/Loc
+al/Programs/MiKTeX/fonts/type1/public/doublestroke/dsrom10.pfb><C:/Users/JoseDa
+nielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/pxmiaX.pfb><C:
+/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/public/newpx/p
+xsys.pfb><C:/Users/JoseDanielMejia/AppData/Local/Programs/MiKTeX/fonts/type1/pu
+blic/newtx/txexs.pfb>
+Output written on Notes.pdf (6 pages, 222941 bytes).
 PDF statistics:
- 168 PDF objects out of 1000 (max. 8388607)
- 17 named destinations out of 1000 (max. 500000)
- 186 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 208 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

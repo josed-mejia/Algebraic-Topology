@@ -24,12 +24,17 @@
 \section{Notation}
 \begin{enumerate}
 	\item \(\dsone\), The identity map.
-	\item \(I\), The interval \([0,1] \in \RR\)
+	\item \(I\), The interval \([0,1] \in \RR\).
 	\item \(\amalg\), Disjoint union of sets or spaces.
+	\item \(D^n\), unit disk or ball in \(\RR{n}\).
+	\item \(S^n\), unit sphere in \(\RR{n+1}\).
+	\item \(\partial D^n = S^{n-1}\), the boundary of the \(n\)-disc.
 \end{enumerate}
 \pagebreak
 
 \chapter{Geometric notions}
+
+\section{Homotopy and Homotopy Type}
 
 \dfn{Deformation Retraction}{
 A \textbf{Deformation Retraction} from a subspace \(X\) onto a subspace \(A\) is a family of maps \(f_t : X \to X, \ t \in I\) such that
@@ -91,6 +96,74 @@ Homotopy equivalence is an \textbf{equivalence relation}.
 \sep
 
 A space having the homotopy type os a single point is \textbf{Contractible}. This implies the identity map of this space is \textbf{Nullhomotopic}, meaning it's homotopic to a constant map. The converse is not true.
+
+\section{Cell Complexes}
+
+\dfn{Genus}{
+The genus of a connected, orientable surface \(M_g\) is the maximum number of cuttings along non-intersecting closed simple curves without rendering the resultant manifold disconnected.It is equal to the number of handles (or `holes') on it.
+}
+
+An orientable surface \(M_g\) of genus \(g\) can be constructed using a polygon with \(4g\) sides and identifying their edges pairwise.
+
+\fgr{Genus}{0.4}
+
+\dfn{\(n\)-cells}{
+An \(n\)-cell, at least in \(\RR[n]\) are discs \(D^n\). These are \(n\)-dimensional spaces that can be glues together along their boundaries.
+}
+
+The torus can be built by first gluing two \(1\)-cells together, \(a\) and \(b\), resulting in a kind of `wire' skeleton. Then, gluing to it a \(2\)-cell (the interior of the polygon).
+
+\dfn{Cell Complex}{
+A \textbf{Cell Complex} is a space \(X\) constructed by the following procedure:
+
+\begin{enumerate}
+	\item Start with the discrete set \(X^0\), whose points are regarded as \(0\)-cells. 
+	\item Inductively, form the \textbf{\(n\)-skeleton} \(X^n\) from \(X^{n-1}\) by attaching \(n\)-cells \(e^n_\alpha\) via maps \(\varphi_\alpha : S_{n-1} \to X^{n-1}\). \\ This means \(X_n\) is the quotient space of the disjoint union \(X^{n-1} \amalg_\alpha D^n_\alpha\) of \(X^{n-1}\) with a collection of \(n\)-disks \(D_\alpha^n\) with the identifications \(x \sim \varphi_\alpha(x)\) for \(x\in \partial D^n_\alpha\). Thus as a set, \(X^n = X^{n-1} \amalg_\alpha e^n_\alpha\) where each \(e^n_\alpha\) is an open \(n\)-disk.
+	\item The process can be stopped at a finite number of steps, given \(X = X^n\) for an \(n < \infty\). If not, \(X = \bigcup_n X^n\). Here \(X\) is given the weak topology, meaning a set \(A \subset X\) is open (or closed), iff \(A \cap X^n\) is open (or closed) in \(X^n\) for each \(n\).
+\end{enumerate}
+}
+
+If \(X = X^n\) for some \(n\), \(X\) is said to be finite-dimensional, and the smallest of such \(n\) is the \textbf{Dimension} of \(X\), the maximum dimension of cells in \(X\).
+
+\ex{\(1\) cell complex}{
+A \(1\) cell complex is a \textbf{Graph}, consisting of \(0\)-cells, (vertices) and \(1\)-cells (edges).
+}
+
+\dfn{Euler Characteristic}{
+The \textbf{Euler Characteristic} of a cell complex is the number of even-dimensional cells minus the number of odd-dimensional cells.
+
+The Euler characteristic of a cell complex depends only of its homotopy type.
+}
+
+\ex{Sphere \(S_n\)}{
+The sphere \(S^n\) has a structure with only two cells, \(e^0\) and \(e^n\), \(e^0\) being its center point and \(e^n\), the \(n\)-cell being attached by the constant map \(S^{n-1} \to e^0\).
+
+This is equivalent to regarding \(S^n\) as the quotient space \(D / \partial D^n\), as in folding all the edge of a disk onto a single point.
+}
+
+\dfn{Characteristic Map}{
+Each cell \(e_\alpha^n\) in a cell complex \(X\) has a \textbf{Characteristic Map} \(\Phi_\alpha : D^n_\alpha \to X\), which extends the attaching map \(\varphi_\alpha\) and is a homeomorphism from the interior of \(D^n_\alpha\) onto \(e_\alpha^n\)
+}
+
+The characteristic map homeomorphically maps the interior of the disk onto an open \(n\)-cell \(e^{n}\) and maps the boundary \(\partial D^{n}=S^{n-1}\) into the \((n-1)\)-skeleton \(X^{n-1}\).
+
+The attaching map defines how the boundary of a new \(n\)-cell is glued onto the existing skeleton (\(X^{n-1}\)), while the characteristic map defines the entire cell's position and structure within the space.
+ 
+\ex{Characteristic map of \(S^n\)}{
+With \(S^n\) built as a CW-complex as presented above, the \textbf{characteristic map} for the \(n\)-cell is the quotient map \(D^n \to S^n\), collapsing \(\partial D^n\) to a point.
+}
+
+\dfn{Subcomplex}{
+A \textbf{Subcomplex} of a cell complex \(X\) is a closed subspace \(A \subset X\) that is a union of cells in \(X\).
+}
+
+A subcomplex is a cell complex in itself, since \(A\) being closed implies that each characteristic map of it cells has image contained in \(A\).
+
+A pair \(X,A\), consisting of a cell complex and a subcomplex is called a \textbf{CW pair}.
+
+Each skeleton \(X^n\) is a subcomplex of the cell complex \(X\).
+
+\nt{Cell complex constructions for an object are not unique. There are infinitely many ways to arrange cells in order to build a space. In this sense, sometimes a cell complex can or cannot be a subcomplex of another. It depends on the structure given initially for both.}
 
 
  
