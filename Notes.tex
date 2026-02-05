@@ -1,0 +1,97 @@
+\documentclass{report}
+
+\usepackage[shortlabels]{enumitem}
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
+
+\input{preamble}
+\input{macros}
+\input{letterfonts}
+
+\title{\Huge{Algebraic Topology Notes}}
+\author{\huge{José Daniel Mejía C.}}
+\date{2026}
+
+\begin{document}
+
+\maketitle
+\newpage% or \cleardoublepage
+% \pdfbookmark[<level>]{<title>}{<dest>}
+\pdfbookmark[section]{\contentsname}{toc}
+\tableofcontents
+\pagebreak
+
+\section{Notation}
+\begin{enumerate}
+	\item \(\dsone\), The identity map.
+	\item \(I\), The interval \([0,1] \in \RR\)
+	\item \(\amalg\), Disjoint union of sets or spaces.
+\end{enumerate}
+\pagebreak
+
+\chapter{Geometric notions}
+
+\dfn{Deformation Retraction}{
+A \textbf{Deformation Retraction} from a subspace \(X\) onto a subspace \(A\) is a family of maps \(f_t : X \to X, \ t \in I\) such that
+\[
+f_0 = \dsone, \quad f_1(X) = A \quad \text{and} \quad \restr{f_t}{A} = \dsone \ \forall t \in I
+\]
+
+The family \(f_t\) should be continuous in the sense that the associated map \(X \times I \to X, (x,t) \mapsto f_t\) is continuous.
+}
+
+A deformation retraction allows us to deform a space onto a subspace of itself continuously. The catch is, this subspace is never affected by the retraction, only \(X \setminus A\) is.
+
+\dfn{Mapping Cylinder}{
+For a map \(f : X \to Y\) its \textbf{Mapping Cylinder} \(M_f\), is the quotient space of the disjoint union \(X\times I \amalg Y\), where,
+
+\[
+(x,1) \in X\times I \quad \text{identified with} \quad f(x) \in Y
+\]
+}
+
+This way, the part of \(M_f\) that is \(X\times I\) Has one end deformed to the shape of \(Y\). In this manner \(X\) can deform into \(Y\) as it `moves' through the tube of length 1, as seen in the image. This is properly described as sliding each point \((x,t)\) along the segment \(\{x\} \times I \subset M_f\) to the endpoint \(f(x) \in Y\).
+
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=0.5\textwidth]{MappingCylinder}
+\end{figure}
+
+Not all deformation retractions arise from mapping cylinders though.
+
+\dfn{Homotopy}{
+A \textbf{Homotopy} is a family of maps \(f_t : X \to Y, \ t\in I\) such that the associated map \(F: X\times I \to Y, \ F(x,t) = f_t(x)\) is continuous.
+Two maps \(f_0, f_1 : X\to Y\) are said to be \textbf{Homotopic} if there is a homotopy \(f_t\) connecting them. it is noted \(f_0 \simeq f_1\) 
+}
+
+It becomes clear that a deformation retraction is a special case of a homotopy. It is in fact, a homotopy that connects the identity map on \(X, \dsone = f_0\) to its retraction on \(A\), a map \(r: X\to X\) such that \(r(X) = A\) and \(\restr{r}{A} = \dsone\).
+
+Retractions are the topological analogs of projection operators in other parts of mathematics.
+
+\dfn{Homotopy relative to \(A\)}{
+A homotopy is said to be \textbf{relative to} \(A \subset X\) if its restriction to \(A\) is independent of \(t\).
+}
+
+For example, a deformation retraction of \(X\) onto \(A\) is a homotopy \textbf{rel} \(A\) from the identity map of \(X\) to a retraction of \(X\) onto \(A\), since \(\restr{f_t}{A} = \dsone\), independent of \(t\).
+
+\dfn{Homotopy Equivalent Spaces}{
+A map \(f:X \to Y\) is a \textbf{Homotopy Equivalence} if there exists a map 
+\[
+g: Y \to X \quad \text{such that} \quad fg \simeq \dsone \ \text{and} \ gf \simeq \dsone
+\]
+
+
+In this case, the spaces \(X\) and \(Y\) are said to be \textbf{Homotopy Equivalent} or to have the same \textbf{Homotopy Type}. Notation is \(X \simeq Y\).
+}
+
+This way, for example, several deformation retractions of the same space are homotopy equivalent; despite not being deformation retractions of each other necessarily.
+
+Homotopy equivalence is an \textbf{equivalence relation}.
+
+\sep
+
+A space having the homotopy type os a single point is \textbf{Contractible}. This implies the identity map of this space is \textbf{Nullhomotopic}, meaning it's homotopic to a constant map. The converse is not true.
+
+
+ 
+\end{document}
