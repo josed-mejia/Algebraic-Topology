@@ -4,6 +4,8 @@
 \usepackage{pgfplots}
 \pgfplotsset{compat=1.18}
 
+\setcounter{chapter}{-1}
+
 \input{preamble}
 \input{macros}
 \input{letterfonts}
@@ -165,6 +167,41 @@ Each skeleton \(X^n\) is a subcomplex of the cell complex \(X\).
 
 \nt{Cell complex constructions for an object are not unique. There are infinitely many ways to arrange cells in order to build a space. In this sense, sometimes a cell complex can or cannot be a subcomplex of another. It depends on the structure given initially for both.}
 
+\chapter{The Fundamental Group}
+
+\section{Basic Constructions}
+
+\dfn{Path}{
+A \textbf{Path} in a space \(X\) is a continuous map \(f:I \to X\)
+}
+
+\dfn{Homotopy of Maps}{
+A \textbf{Homotopy} of maps is a family of functions \(f_t: I \to X, \ 0 \leq t \leq 1\) such that 
+\[
+f_t(0) = x_0, \quad f_t(1) = x_1, \quad \text{for every} \ t
+\]
+and
+\[
+\text{the associated map} \ F: I \times I \to X \ \text{defined by} \ F(s,t) = f_t(s) \ \text{is continuous.}
+\]
+}
+
+This notion is useful for having continuous deformations of a path make sense. Two paths \(f_0, \ f_1\) are \textbf{Homotopic} if there is a homotopy between them. In this sense, \(f_1\) is a continuous deformation of \(f_0\), keeping the start and endpoint the same.
+
+\ex{Linear Homotopies}{
+Any two paths \(f_0, \ f_1\) in \(\RR[n]\) with the same start and endpoints are homotopic via the homotopy
+\[
+f_t(s) = (1-t)f_0(s) + tf_1(s)
+\]
+}
+
+This further shows that for any convex space \(X \subset \RR[n]\) any \(f_0, \ f_1\) in \(X\) with the same start and endpoints are homotopic.
+
+\mprop{}{
+The relation of homotopy on paths with fixed endpoints in any space is an  equivalence relation.
+}
+
+The equivalence class of a path \(f\), \([f]\) is called the \textbf{Homotopy Class} of \(f\).
 
  
 \end{document}
