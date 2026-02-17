@@ -1,5 +1,0 @@
-\contentsline {section}{\numberline {0.1}Notation}{2}{section.0.1}%
-\contentsline {chapter}{\numberline {1}Geometric notions}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Homotopy and Homotopy Type}{3}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Cell Complexes}{4}{section.1.2}%
-\contentsfinish 
